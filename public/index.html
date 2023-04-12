@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <link rel="icon" href="<%= BASE_URL %>favicon.ico">
+    <title>Sakana动漫</title>
+    <style>
+      @import url("https://s1.hdslb.com/bfs/static/jinkela/long/font/regular.css");
+      html .sakana-box{
+        position: fixed;
+        right: 0;
+        bottom: 0;
+        transform-origin: 100% 100%; /* 从右下开始变换 */
+        z-index: 999;
+      }
+    </style>
+    <script>
+      (function() {var a = new Date(); debugger; return new Date() - a > 100;}())
+    </script>
+  </head>
+  <body>
+    <noscript>
+      <strong>We're sorry but <%= htmlWebpackPlugin.options.title %> doesn't work properly without JavaScript enabled. Please enable it to continue.</strong>
+    </noscript>
+    <div id="app"></div>
+    <!-- built files will be auto injected -->
+    <div class="sakana-box"></div>
+    <script src="https://cdn.jsdelivr.net/npm/sakana"></script>
+    <script>
+    Sakana.init({
+      el:         '.sakana-box',     // 启动元素 node 或 选择器
+      scale:      .3,                // 缩放倍数
+      canSwitchCharacter: true,      // 允许换角色
+    });
+    Sakana.setMute(false);
+    </script>
+  </body>
+</html>
